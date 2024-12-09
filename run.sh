@@ -1,5 +1,5 @@
 function run {
-  { time $2 ; } 2> /tmp/o 1> /dev/null
+  { time $2 ; } 2> /tmp/o # 1> /dev/null
   printf "$1 = "
   cat /tmp/o # | awk -v N=1 '{print $N}'
 }
